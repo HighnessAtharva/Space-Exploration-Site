@@ -364,7 +364,7 @@ picutre {
     .mobile-nav-toggle {
         z-index: 2000;
         aspect-ratio: 1;
-        background: url(icon-hamburger.ec4d4bb2.svg) 50% no-repeat;
+        background: url(../assets/icon-hamburger.ec4d4bb2.svg) 50% no-repeat;
         border: 0;
         width: 1.5rem;
         display: block;
@@ -374,7 +374,7 @@ picutre {
     }
 
     .mobile-nav-toggle[aria-expanded=true] {
-        background-image: url(icon-close.ce2dc749.svg)
+        background-image: url(../assets/icon-close.ce2dc749.svg)
     }
 
     .mobile-nav-toggle:focus-visible {
