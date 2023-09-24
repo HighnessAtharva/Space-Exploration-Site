@@ -28,22 +28,6 @@ function show(container, selector) {
     container.querySelector(selector).removeAttribute("hidden");
 }
 
-tabList.addEventListener("keydown", function (event) {
-    if (event.keyCode === 37 || event.keyCode === 39) {
-        tabs[tabIndex].setAttribute("tabindex", -1);
-        if (event.keyCode === 37) {
-            if (--tabIndex < 0) {
-                tabIndex = tabs.length - 1;
-            }
-        } else if (event.keyCode === 39) {
-            if (++tabIndex >= tabs.length) {
-                tabIndex = 0;
-            }
-        }
-        tabs[tabIndex].setAttribute("tabindex", 0);
-        tabs[tabIndex].focus();
-    }
-});
 
 tabs.forEach(tab => {
     tab.addEventListener("click", handleTabClick);

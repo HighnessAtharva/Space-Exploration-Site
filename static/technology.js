@@ -39,19 +39,6 @@ function showElement(parent, selector) {
   }
 }
 
-tabList.addEventListener("keydown", function (e) {
-  if (e.keyCode === 37 || e.keyCode === 39) {
-    tabs[currentTabIndex].setAttribute("tabindex", -1);
-    if (e.keyCode === 37) {
-      currentTabIndex = (currentTabIndex - 1 + tabs.length) % tabs.length;
-    } else {
-      currentTabIndex = (currentTabIndex + 1) % tabs.length;
-    }
-    tabs[currentTabIndex].setAttribute("tabindex", 0);
-    tabs[currentTabIndex].focus();
-  }
-});
-
 tabs.forEach(tab => {
   tab.addEventListener("click", function (e) {
     activateTab(e.currentTarget);
